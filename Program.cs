@@ -8,10 +8,9 @@ namespace BlackWhiteSquaresGame
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
+            var game = new GameModel(5);
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new Form1(game) {ClientSize = new Size(300, 300)});
         }
     }
 }
